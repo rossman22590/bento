@@ -1,15 +1,24 @@
-import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vitest/config';
+import Unfonts from 'unplugin-fonts/vite';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-    preprocess: vitePreprocess(),
-    kit: {
-        // Use the Vercel adapter for deployment
-        adapter: adapter(),
-        // Add other kit configurations if needed
-        // ...
+export default defineConfig({
+  root: './src',
+  build: {
+    rollupOptions: {
+      input: './src/app.html'
     }
-};
+  },
+  plugins: [
+    sveltekit(),
+    Unfonts({
+      google: {
+        families: ['Figtree'],
+      },
+    }),
+  ],
+  test: {
+    include: ['src/**/*.{test,spec}.{js,ts}']
+  }
+});
 
-export default config;
