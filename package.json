@@ -2,15 +2,15 @@
 	"name": "bento",
 	"version": "0.0.1",
 	"scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "start": "node build",
-    "preview": "svelte-kit preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "test": "vitest",
-    "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+         "dev": "svelte-kit dev",
+         "build": "svelte-kit build",
+         "start": "node build",
+        "preview": "svelte-kit preview",
+         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+	"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+	"test": "vitest",
+	"lint": "prettier --plugin-search-dir . --check . && eslint .",
+	"format": "prettier --plugin-search-dir . --write ."
 }
 
 	"devDependencies": {
