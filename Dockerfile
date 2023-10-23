@@ -13,8 +13,11 @@ RUN npm install
 # Copy the rest of the application code into the container
 COPY . .
 
-# Try building the project using Vite
-RUN npm run build
+# Build the project using Vite
+RUN vite build
 
-# Specify the command to run when the container starts
+# Expose the port your app runs on. Assuming it's 3000.
+EXPOSE 3000
+
+# Command to run your production server. This is based on your npm script.
 CMD [ "npm", "run", "start" ]
