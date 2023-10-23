@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+# Set the OpenAI API Key environment variable
+ENV OPENAI_API_KEY=53534
+
 # Build the SvelteKit application
 RUN npm run build
 
