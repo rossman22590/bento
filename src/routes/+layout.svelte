@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Bento - Your AI Cooking Companion</title>
+	<title>AI Tutor</title>
 </svelte:head>
 
 <slot />

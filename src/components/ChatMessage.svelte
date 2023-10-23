@@ -9,7 +9,7 @@
 <div class={`container ${type}`}>
 	<div class="icon">
 		{#if type === 'incoming'}
-			<img src="favicon.jpg" alt="Bento icon" />
+			<img src="favicon.png" alt="Bento icon" />
 		{:else}
 			<div class="person-icon">
 				<User2 />

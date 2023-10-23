@@ -15,7 +15,7 @@ interface PlayHTTTSBodyParams {
 const defaultBody: PlayHTTTSBodyParams = {
     text: '',
     voice: env.PLAYHT_VOICE_ID,
-    quality: 'medium',
+    quality: 'high',
     output_format: 'mp3',
     sample_rate: 24000
 };
