@@ -4,14 +4,11 @@ FROM node:16
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json into the container
-COPY package*.json ./
-
-# Install project dependencies
-RUN npm install
-
-# Copy the rest of the application code into the container
+# Copy all files into the container
 COPY . .
+
+# Install dependencies
+RUN npm install
 
 # Build the project using Vite
 RUN npx vite build
