@@ -41,6 +41,6 @@
 		"axios": "^1.5.1",
 		"lucide-svelte": "^0.268.0",
 		"openai": "^4.0.0",
-		"sirv": "^1.0.19"  // Added sirv here
+		"sirv": "^1.0.19" 
 	}
 }
