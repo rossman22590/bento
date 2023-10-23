@@ -29,4 +29,4 @@ ENV PORT=5173
 EXPOSE $PORT
 
 # Command to run the HTTP server
-CMD ["serve", "-s", "./build", "-l", "5173"]
+CMD ["serve", "-s", "./build", "-l", "tcp://0.0.0.0:5173"]
