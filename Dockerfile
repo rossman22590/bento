@@ -1,4 +1,4 @@
-# Use the official Node.js 14 image as the base image
+# Use the official Node.js 16 image as the base image
 FROM node:16
 
 # Set the working directory inside the container
@@ -13,11 +13,17 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+# Build the SvelteKit application
+RUN npm run build
+
+# Install 'serve' to run our application
+RUN npm install -g serve
+
 # Set the environment variable for the port
 ENV PORT=5173
 
 # Expose the port
 EXPOSE $PORT
 
-# Set the default command to run when the container starts
-CMD ["npm", "run", "dev"]
+# Command to run the HTTP server
+CMD ["serve", "-s", "./build", "-l", "5173"]
