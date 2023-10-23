@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the project using Vite
-RUN vite build
+RUN npx vite build
 
 # Expose the port your app runs on. Assuming it's 3000.
 EXPOSE 3000
